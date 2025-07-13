@@ -149,11 +149,11 @@ Um arquivo index.html básico é fornecido como exemplo de como consumir esta AP
 
 - Salve o Arquivo HTML:
 
-- Salve o código HTML/CSS/JavaScript do exemplo na pasta frontend (index.html) em uma pasta no seu computador.
+- Salve o código HTML/CSS/JavaScript do exemplo na pasta frontend, que esta dentro de assets, em uma pasta no seu computador.
 
 - Abra no Navegador:
 
-- Dê um duplo clique no arquivo index.html ou arraste-o para a janela do navegador. Ele será aberto diretamente (file:///).
+- Dê um duplo clique no arquivo index.html ou arraste-o para a janela do navegador. Ele será aberto diretamente.
 
 - Alternativamente (Recomendado para Desenvolvimento): Use uma extensão como o "Live Server" no VS Code para servir o arquivo HTML. Isso geralmente o abre em http://127.0.0.1:5500 ou http://localhost:5500, que é o cenário que você configurou no CORS.
 
