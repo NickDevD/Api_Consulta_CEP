@@ -162,7 +162,7 @@ docker pull nickdocd/api_consulta_cep:latest  # ou a tag de versão específica,
 ```
 ### Execute o contêiner, mapeando a porta 8080
 ```
-docker run -p 8080:8080 seu-usuario-docker/api-consulta-cep:latest
+docker run -p 8080:8080 nickdocd/api_consulta_cep:latest
 ```
 Após executar o comando docker run, a aplicação estará disponível em http://localhost:8080/.
 
