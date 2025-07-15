@@ -1,18 +1,33 @@
-name: Docker Image CI
+name: Docker Image CI # Nome do seu fluxo de trabalho
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main" ] # Aciona o fluxo de trabalho em pushes para a branch 'main'
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main" ] # Aciona o fluxo de trabalho em pull requests para a branch 'main'
 
 jobs:
-
   build:
-
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # Especifica o sistema operacional para o job (Ubuntu mais recente)
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag api_consulta_cep:$(date +%s)
+    - uses: actions/checkout@v4 # Faz o checkout do código do seu repositório
+
+    - name: Configurar JDK 22 # Configura o Java Development Kit
+      uses: actions/setup-java@v4
+      with:
+        java-version: '22' # Certifique-se de que esta versão corresponde à versão do Java do seu projeto
+        distribution: 'temurin' # Distribuição recomendada do JDK
+        cache: 'maven' # Armazena em cache as dependências do Maven para acelerar as compilações
+
+    - name: Compilar com Maven # ESTA É A ETAPA CRUCIAL PARA COMPILAR SEU PROJETO
+      run: mvn clean install -DskipTests # Limpa, compila e empacota sua aplicação
+                                       # -DskipTests ignora os testes para acelerar as compilações de CI
+
+    - name: Construir e enviar imagem Docker # Constrói sua imagem Docker
+      uses: docker/build-push-action@v5
+      with:
+        context: . # O contexto de build é o diretório atual (raiz do seu repositório)
+        push: false # Defina como 'true' se você quiser enviar a imagem para um registro (ex: Docker Hub)
+        tags: api_consulta_cep:latest # Atribui uma tag à sua imagem Docker
+                                     # Você também pode usar uma tag dinâmica como 'api_consulta_cep:${{ github.run_number }}'
