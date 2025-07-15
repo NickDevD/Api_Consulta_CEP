@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f2f5; /* Fundo cinza claro */
+    margin: 0;
+    color: #333333; /* Texto principal em cinza escuro */
+}
+
+.container {
+    background-color: #ffffff; /* Fundo branco para o container */
+    padding: 30px;
+    border-radius: 8px; /* Borda um pouco mais suave */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra mais evidente */
+    text-align: center;
+    width: 90%;
+    max-width: 450px; /* Um pouco maior para um visual mais robusto */
+    border: 1px solid #e0e0e0; /* Borda sutil */
+}
+
+h1 {
+    color: #004b8d; /* Azul Correios para o título */
+    margin-bottom: 25px;
+    font-size: 28px; /* Tamanho maior para o título */
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 12px; /* Aumentei o padding */
+    margin-bottom: 18px; /* Mais espaço abaixo do input */
+    border: 1px solid #cccccc; /* Borda mais clara */
+    border-radius: 4px; /* Borda mais sutil */
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #004b8d; /* Borda azul ao focar */
+    outline: none; /* Remove o contorno padrão */
+}
+
+button {
+    background-color: #004b8d; /* Azul Correios para o botão */
+    color: white;
+    padding: 14px 25px; /* Botão maior */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 17px; /* Fonte maior no botão */
+    font-weight: bold; /* Texto em negrito */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Adicionado transform */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para o botão */
+}
+
+button:hover {
+    background-color: #003a6b; /* Azul um pouco mais escuro ao passar o mouse */
+    transform: translateY(-1px); /* Pequeno efeito de elevação */
+}
+
+button:active {
+    background-color: #002d50; /* Azul mais escuro ao clicar */
+    transform: translateY(0); /* Retorna à posição original */
+}
+
+#resultado {
+    margin-top: 28px; /* Mais espaço acima do resultado */
+    padding: 20px; /* Aumentei o padding */
+    border: 1px dashed #cccccc; /* Borda pontilhada mais clara */
+    border-radius: 6px;
+    min-height: 90px;
+    text-align: left;
+    word-wrap: break-word;
+    background-color: #f9f9f9; /* Fundo levemente cinza para o resultado */
+    line-height: 1.6;
+    color: #555555; /* Cor de texto mais suave para o resultado */
+}
+
+#resultado p {
+    margin: 8px 0; /* Mais espaço entre os parágrafos */
+    line-height: 1.6;
+}
+
+.error {
+    color: #e74c3c; /* Vermelho para erros */
+    font-weight: bold;
+}
+
+.loading {
+    color: #ffcc00; /* Amarelo Correios para o "carregando" */
+    font-style: italic;
+    font-weight: bold; /* Negrito para destacar */
+}

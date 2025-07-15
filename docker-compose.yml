@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  backend:
+    # Indica ao Docker Compose para construir a imagem a partir do Dockerfile
+    # que está na pasta 'cepapi/' relativa a este docker-compose.yml
+    build: .
+    # Mapeia a porta 8080 do seu host (sua máquina) para a porta 8080 do contêiner.
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    # Nome do conteiner
+    container_name: api-consulta-cep

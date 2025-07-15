@@ -1,5 +1,5 @@
  // URL da sua API Spring Boot
-        const API_BASE_URL = 'http://localhost:8080/v1/cep/';
+        const API_BASE_URL = '/v1/cep/';
 
         async function consultarCep() {
             const cepInput = document.getElementById('cepInput');
