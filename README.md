@@ -188,7 +188,7 @@ Acesse a documentação interativa da API (gerada pelo Springdoc OpenAPI) em:
 http://localhost:8080/swagger-ui.html
 Aqui você pode ver todos os endpoints disponíveis, seus parâmetros, modelos de resposta e até mesmo testar as requisições diretamente na interface.
 
-🤝 Contribuição
+## 🤝 Contribuição
 Contribuições são bem-vindas! Se você tiver sugestões, melhorias ou encontrar bugs, sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
 📄 Licença
