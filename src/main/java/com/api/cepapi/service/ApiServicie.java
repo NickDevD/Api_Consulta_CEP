@@ -24,8 +24,8 @@ public class ApiServicie {
             return mapper.readValue(httpResponse.body(), EnderecoDTO.class);
 
         } catch (Exception e) {
-            System.err.println("Erro ao consultar CEP: " + e.getMessage()); // Use System.err para erros
-            return null; // Retorne null ou lance uma exceção mais específica
+            System.err.println("Erro ao consultar CEP: " + e.getMessage()); // Usa System.err para erros
+            return null; // Retorna null ou lança uma exceção mais específica
         }
     }
 }
