@@ -1,4 +1,4 @@
-FROM eclipse-temurin:22-jdk-bookworm
+FROM amazoncorretto:22
 
 LABEL maintainer="Nicholas Monteiro <nick.developerdev@gmail.com>"
 
