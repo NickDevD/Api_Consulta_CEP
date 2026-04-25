@@ -1,4 +1,4 @@
-FROM openjdk:22-bookworm
+FROM eclipse-temurin:22-jdk-bookworm
 
 LABEL maintainer="Nicholas Monteiro <nick.developerdev@gmail.com>"
 
